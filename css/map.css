@@ -8,9 +8,7 @@ body{
 	background: #fff;
 	border: 0.5px solid #bdbdbd
 }
-#fish-information{
-	display: none;
-}
+
 .container{
 	max-width: 90%;
 }
