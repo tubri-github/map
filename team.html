@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Inland and Coastal Fishes of Louisiana - Ongoing Projects</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -22,7 +23,7 @@
         .masthead {
             height: 10vh;
             min-height: 300px;
-            background-image: url('img/ICFL_bowfin_underwater_in_swamp_FINAL-cropped.jpg');
+            background-image: url('img/header_img.jpg');
             background-size: 100% 100%;
             background-position: center;
             background-repeat: no-repeat;
@@ -33,16 +34,58 @@
             font-family: "Roboto Slab", "Times New Roman", serif;
         }
         .container p{
-            font-size: 1.1em;
+            /*font-size: 1.1em;*/
             line-height: 1.55em;font-family: "Roboto", "Helvetica", "Arial", sans-serif;
             font-weight: 300;
             color:#040404;
-            text-align: justify;
+            text-align: left;
         }
         .container .lead{
             color:#fff;
             text-align: center;
         }
+        .card {
+            width: 18rem; /* Fixed width */
+            height: 25rem; /* Fixed height */
+            margin-bottom: 1rem; /* Add some space below the card */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-img-top {
+            width: 100%; /* Adjust to the width of the card */
+            height: 10rem; /* Fixed height for the image */
+            object-fit: contain; /* Make sure the image covers the area */
+            border-top-left-radius: calc(.25rem - 1px); /* Match Bootstrap's border radius */
+            border-top-right-radius: calc(.25rem - 1px);
+        }
+
+        .card-body {
+            flex-grow: 1; /* Allow card-body to fill the space */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem; /* Fixed font size for titles */
+            margin-bottom: .5rem; /* Space below the title */
+        }
+
+        .card-text {
+            font-size: .875rem; /* Smaller font size for text */
+            flex-grow: 1; /* Allow text to fill the space and push email to the bottom */
+        }
+
+        .card-text:last-child {
+            margin-bottom: 0; /* Remove margin from the last text element */
+        }
+
+        .card a {
+            font-size: .875rem; /* Smaller font size for links */
+            margin-top: auto; /* Push link/email to the bottom of the card */
+            text-decoration: none; /* Optional: if you prefer links without underlines */
+        }
+
     </style>
 </head>
 <body class="d-flex flex-column h-100">
@@ -55,8 +98,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="about.html">About </a>
-                <a class="nav-item nav-link " href="#">Authors</a>
-                <a class="nav-item nav-link " active>Ongoing projects</a>
+                <a class="nav-item nav-link " active>Team</a>
+                <a class="nav-item nav-link " href="FishDistributionMap_old.html">Ongoing projects</a>
                 <a class="nav-item nav-link" href="#">Checklist</a>
                 <a class="nav-item nav-link" href="#">Donate</a>
             </div>
@@ -69,20 +112,47 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center">
-                    <h1 class="fw-light">ABOUT</h1>
-                    <p class="lead">The Inland and Coastal Fishes of Louisiana</p>
-<!--                    <p class="lead">A Landing Page</p>-->
+                    <h1 class="fw-light">Team</h1>
+                    <p class="lead">Meet Our Team</p>
                 </div>
             </div>
         </div>
     </header>
-    <section class="py-5">
-        <div class="container">
-            <p>
-                Much has changed with understanding of Louisiana’s inland fish fauna since publication of Neil H. Douglas’ book Freshwater Fishes of Louisiana in 1974. This book treated 170 species, including 21 marine invaders. A preliminary check of holdings in fish collections of the Tulane University Museum of Natural History and the University of Louisiana, Monroe reveals that the Louisiana fish fauna presently includes at least 195 species (155 primary freshwater and 40 marine invaders). The list has grown through discovery of new species and new distribution records of both native and exotic species. The Louisiana landscape and its streams and rivers have also changed considerably since 1974, and this has no doubt affected fish distribution and abundance patterns. An updated reference on Louisiana’s inland and coastal fishes is long overdue. Our plan is create both printed books and a web site that can be continually updated. The process will start with assembly of a comprehensive database of all Louisiana fish collection records, based on museum holdings (vouchered records) and verifiable records from other sources. The database will be used to identify areas of the state in need of additional field surveys to document fish changes. The next phase of work will involve georeferencing all occurrence records in the updated database, and using the data to produce updated distribution maps, habitat (niche) models for all species, and analyze species abundance/occurrence trends. The niche models and analyses of abundance trends will be especially valuable for assessing the conservation status of species presently on the Louisiana Natural Heritage Program’s rare and protected fishes list, and for identifying other species in need of protection. The final phase of the work will be organizing the task of writing the introductory chapters and recruiting authors for species accounts. We anticipate that the overall project will take 5-10 years to complete. However, we intend to publish a number of intermediate reports during this process, including an updated species list, distribution atlas, and various data analysis summaries, to inform the scientific community and general public of our progress.
-            </p>
-        </div>
-    </section>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/profiles/bart.jpg" class="card-img-top" alt="Member 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Henry L. Bart</h5>
+                        <p class="card-text">Director Tulane University Biodiversity Research Institute and Curator of the Royal D. Suttkus Fish Collection</p>
+                        <a href="mailto:hbart@tulane.edu">hbart@tulane.edu</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/profiles/yasin.png" class="card-img-top" alt="Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Yasin Bakış</h5>
+                        <p class="card-text">Senior Manager of Biodiversity Informatics and Data Engineering</p>
+                        <a href="mailto:ybakis@tulane.edu">ybakis@tulane.edu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/profiles/xiaojun.jpg" class="card-img-top" alt="Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Xiaojun Wang</h5>
+                        <p class="card-text">Programmer and Web Developer</p>
+                        <a href="mailto:xwang48@tulane.edu">xwang48@tulane.edu</a>
+                    </div>
+                </div>
+            </div>
         </div>
 <footer class="footer mt-auto py-3 px-3">
     @TUBRI

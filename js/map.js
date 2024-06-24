@@ -6,7 +6,8 @@ function initMap() {
     var hydroclim;
     var wmts_url = "http://maps.hydroclim.org/geoserver/gwc/service/wmts?";
     var wms_cache_url = "http://maps.hydroclim.org/geoserver/gwc/service/wms?";
-    var wms_url = "http://maps.hydroclim.org/geoserver/wms?";
+    //var wms_url = "http://maps.hydroclim.org/geoserver/wms?";
+    var wms_url = "https://www.hydroclim.org/geoserver/wms?";
     //var wms_local = "http://192.168.56.101:8080/geoserver/wms?";
     var wms_local = "http://maps.hydroclim.org/geoserver/wms?";
     //var wms_local = "http://localhost:8080/geoserver/hydroclim/wms?";
@@ -67,7 +68,15 @@ function initMap() {
 		// function handleJson(data) {
 			// selectedArea = L.geoJson(data).addTo(map);
 		  // map.fitBounds(selectedArea.getBounds());
-		
+	var water  = new L.TileLayer.WMS(wms_url,{
+        layers: "hydroclim:LA_Hydropoly",
+        format:'image/png',
+        transparent: true,
+        zIndex:50,
+        tiled:true,
+        srs:"EPSG:900913"
+
+    }).addTo(map);
 
 	var reaches = new L.TileLayer.WMS(wms_url,
         {
@@ -75,7 +84,7 @@ function initMap() {
             //layers: "hydroclim:reach_newshape",
             //layers: "hydroclim:0804NHDFlowline",
             //layers: "hydroclim:LA_stream_shp_groups",
-            layers: "hydroclim:LA_stream_shp__from_justin",
+            layers: "hydroclim:LA_Water",
             format: 'image/png',
             transparent: true,
             zIndex: 49,

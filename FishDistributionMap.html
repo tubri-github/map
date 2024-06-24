@@ -18,6 +18,8 @@
     <link href="lib/leaflet.fullscreen.css" rel="stylesheet" />
     <link href="lib/L.Control.MousePosition.css" rel="stylesheet" />
     <link rel=icon href=favicon.png sizes="any" type="image/png">
+	<link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="lib/owlcarousel/owl.theme.default.min.css">
 	<!-- JavaScript Bundle with Popper -->
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
@@ -42,6 +44,7 @@
 <!-- } -->
 <!-- .leaflet-right .leaflet-control { -->
     <!-- margin-right: 250px; -->
+
 </style>
 </head>
 <body class="d-flex flex-column h-100">
@@ -68,24 +71,26 @@
 			<h2 class="text-center">Distributional Map of Louisiana’s Threatened and Endangered Fishes</h2>
 			<div class="row">
 				<div class="col-5" id="speices-info">
-					<p class="text-center" style="color: #212529">Search Taxons:
+					<p class="text-center" style="color: #212529">Search Taxa:
 						<select id="selector" class="selectpicker" data-live-search="true">
 
 						</select>
 					</p>
+					<div class="owl-carousel">
+
+					</div>
 					<div id="fish-information-placeholder"></div>
 					<div id="fish-information">
-						<h3 class=""><span id="species_name"></span></h3>
-						<i class="text-center"><span id="species_scientic_name"></span></i>
-						<img style="width: 100%; height: 15em;object-fit: contain;" id="species-img" src="img/Bluenose%20Shiner.jpeg">
+						<h3 class=""><span id="species_name"></span>Alabama Shad</h3>
+						<i class="text-center"><span id="species_scientic_name">Alosa alabamae</span></i>
+<!--						<img style="width: 100%; height: 15em;object-fit: contain;" id="species-img" src="img/Bluenose%20Shiner.jpeg">-->
 
 						<div class="d-flex "><span id="picture-copyright"></span></div>
-						<div class="d-flex ">Total occurrence records: <span id="total_occ_number"></span></div>
-						<div class="d-flex ">Occurrence records with coordinates:<span id="occ_coord_number"></span></div>
+						<div class="d-flex ">Total occurrence records: <span id="total_occ_number">65</span></div>
+						<div class="d-flex ">Occurrence records with coordinates:<span id="occ_coord_number">64</span></div>
 						<!--				<div class="d-flex ">Verified:<span id="verified-number"> ?</span></div>-->
 						<!--				<div class="d-flex ">Suspect:<span id="suspect-number"> ?</span></div>-->
 					</div>
-
 
 				</div>
 				<!-- <div id="map" class="d-flex justify-content-center"></div> -->
@@ -110,12 +115,12 @@
 					</li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
-					<div class="tab-pane fade show active" id="distribution" role="tabpanel" aria-labelledby="home-tab">The Bluenose Shiner has a scattered distribution across the Gulf Coast from eastern Louisiana, through Mississippi, Alabama, Georgia, the Florida panhandle, and north central Florida (Page and Burr 2011). In Louisiana, the Bluenose Shiner is limited to the Pearl River basin in St. Tammany and Washington Parishes.
+					<div class="tab-pane fade show active" id="distribution" role="tabpanel" aria-labelledby="home-tab">Gulf of Mexico and large rivers from the Suwanee River in Florida to tributaries of the Mississippi as far north as Keokuk, Iowa. Louisiana records (from FishNet2) are primarily from the Pearl River Basin, with limited occurrences in the Tangipahoa and Amite Rivers of the Lake Pontchartrain Basin.
 					</div>
-					<div class="tab-pane fade" id="taxonomy" role="tabpanel" aria-labelledby="profile-tab">The Bluenose Shiner was long recognized as a species of Notropis (Douglas 1974) until Mayden (1989) elevated it to Pteronotropis. The evolutionary relationships of Pteronotropis have been investigated using mtDNA (Simons et al. 2000) and two nuclear loci (Mayden and Allen 2015). Both mitochondrial and nuclear DNA studies recover a sister group relationship between P. welaka and P. hubbsi.
+					<div class="tab-pane fade" id="taxonomy" role="tabpanel" aria-labelledby="profile-tab">The Alabama Shad was first described Meletta suoerii by Valenciennes in Cuvier & Valenciennes 1847 from the Wabash River, USA (Fricke et al. 2021). The name was forgotten and subsequently placed in the synonym of the earlier name Alosa alabamae Jordan & Evermann 1896 (Whitehead 1985). It is believed to be most closely related to and sister species to the geographically disjunct American Shad, Alosa sapidissima (Berry 1964).
 					</div>
-					<div class="tab-pane fade" id="habitat" role="tabpanel" aria-labelledby="contact-tab"><span class="reference" title="Knight, C. L. and C. E. Johnston. 1996. Life-history aspects of the Bluenose Shiner, Pteronotropis welaka. In: Abstracts, Proceedings of the Annual Meeting of the Mississippi Chapter of the American Fisheries Society. Vol. 20, Pickwick Landing State Park, TN. "><a href="#">Knight and Johnston (1996)</a></span> noted that Bluenose Shiners occupy sluggish habitats with vegetation. Cook (1959) and Baker and Ross (1991) both noted the species is strongly associated with aquatic vegetation in blackwater streams. </div>
-					<div class="tab-pane fade" id="conservation" role="tabpanel" aria-labelledby="contact-tab">The Bluenose Shiner has imperiled status (S2) in Louisiana, as it is only known to occur at 6-20 localities in the state.
+					<div class="tab-pane fade" id="habitat" role="tabpanel" aria-labelledby="contact-tab"><span class="reference" title="The Alabama Shad is a schooling, anadromous species, maturing in marine waters of the Gulf of Mexico and ascending large natal rivers for spawning and early development. Adults appear in spawning rivers from January-April in southern coastal sites and are present in the upper Mississippi from April to July (Coker 1930, Pflieger 1997). Young-of-the-year are found in rivers between mid-July and early October (Pflieger 1997). Juveniles stay in fresh water for 6-8 months, leave rivers by winter, and return to spawn usually when 3-4 years old. Using otoliths, Mettee et al. (1996) found that spawning males were 1-4 years old and females were 2-6 years old.">The Alabama Shad is a schooling, anadromous species, maturing in marine waters of the Gulf of Mexico and ascending large natal rivers for spawning and early development. Adults appear in spawning rivers from January-April in southern coastal sites and are present in the upper Mississippi from April to July (Coker 1930, Pflieger 1997). Young-of-the-year are found in rivers between mid-July and early October (Pflieger 1997). Juveniles stay in fresh water for 6-8 months, leave rivers by winter, and return to spawn usually when 3-4 years old. Using otoliths, Mettee et al. (1996) found that spawning males were 1-4 years old and females were 2-6 years old.
+					<div class="tab-pane fade" id="conservation" role="tabpanel" aria-labelledby="contact-tab">Once the target of a productive commercial fishery on the Ohio River (Evermann 1902), freshwater populations throughout the species’ range have undergone a precipitous decline due to locks and dams built for navigation, hydroelectric generation, and flood control, which have effectively blocked migration routes to historical spawning areas (Hammerson and Master 2009). The Alabama Shad is presently listed as Near Threatened by IUCN (Sammons et al. 2021). Its Global Ranking is Imperiled (Hammerson and Master 2009). The Alabama Shad presently has no US Endangered Species Act protection but is being considered (Lopez 2013). In Louisiana, the Alabama Shad is listed as Critically Imperiled (S1) because of extreme rarity (5 or fewer known extant populations) or because of some factor(s) making it especially vulnerable to extirpation (Holcomb et al. 2015). Gunning and Suttkus (1990) first reported on the decline of the Alabama Shad’s most viable Louisiana population in the Pearl River. They attributed the decline to dams and declining habitat conditions in the river.
 					</div>
 				</div>
 			</div>
@@ -141,110 +146,132 @@
     <script src="lib/Leaflet.fullscreen.min.js"></script>
 
 	<script src="lib/esri-leaflet.js"></script>
+		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
 	  <script src="data/species.js"></script>
 	 <script type="text/javascript">
+		 $(document).ready(function() {
 			 speciesList.sort(function(first, second) {
 				 return parseInt(first["field1"]) - parseInt(second["field1"]);
 			 });
 
-            var str = '<option value="" >Search or Select fish species</option>';
-            for(var i = 0;i<speciesList.length;i++) {
-                str+='<option data-tokens="'+speciesList[i].CommonName+'">'+speciesList[i].CommonName+'(' + speciesList[i].ScientificName +')' + '</option>';
-            }
-            $('select').html(str);
 
-            $('select').selectpicker('refresh');
+			 speciesList.forEach(function(species) {
+				 var itemContent = `
+						<div class="item" data-hash="${species.ScientificName}">
+							<img style="width: 90%; height: 15em;object-fit: contain;" src="img/${species.CommonName}.jpg" alt="${species.CommonName}">
+							<h3>${species.CommonName} (${species.ScientificName})</h3>
+						</div>`;
+				 $(".owl-carousel").append(itemContent);
 
-			$('#selector').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-				$("#fish-information").show()
-				$("#species_name").text(speciesList[clickedIndex-1].CommonName)
-				$("#species_scientic_name").text(speciesList[clickedIndex-1].ScientificName)
-				$("#species-img").attr('src',"img/" + speciesList[clickedIndex-1].CommonName + ".jpg")
-				$("#picture-copyright").html(speciesList[clickedIndex-1].ProfileCitation)
-				$("#total_occ_number").text(speciesList[clickedIndex-1].total_count)
-				$("#occ_coord_number").text(speciesList[clickedIndex-1].occ_coord_count)
-				$("#distribution").text(speciesList[clickedIndex-1].Distribution)
-				$("#taxonomy").text(speciesList[clickedIndex-1].TaxonAndSys)
-				$("#habitat").text(speciesList[clickedIndex-1].Habitat)
-				$("#conservation").text(speciesList[clickedIndex-1].Conservation)
-				removePoints();
-				loadPoints(clickedIndex);
-});
+			 });
+			 var str = '<option value="" >Search or Select fish species</option>';
+			 for(var i = 0;i<speciesList.length;i++) {
+				 str+='<option data-tokens="'+speciesList[i].CommonName+'">'+speciesList[i].CommonName+'(' + speciesList[i].ScientificName +')' + '</option>';
+			 }
+			 $('select').html(str);
 
+			 $('select').selectpicker('refresh');
 
+			 $(".owl-carousel").owlCarousel({
+				 items: 1,
+				 loop: false,
+				 nav: true,
+				 navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+				 onDragged:onDragged,
+				 onTranslated:onDragged
+			 });
+			 function onDragged(event){
+				 var index = event.item.index;
+				 var species = speciesList[index];
+				 $("#species_name").text(species.CommonName);
+				 $("#species_scientic_name").text(species.ScientificName);
+				 $("#picture-copyright").html(species.ProfileCitation);
+				 $("#total_occ_number").text(species.total_count);
+				 $("#occ_coord_number").text(species.occ_coord_count);
+				 $("#distribution").text(species.Distribution);
+				 $("#taxonomy").text(species.TaxonAndSys);
+				 $("#habitat").text(species.Habitat);
+				 $("#conservation").text(species.Conservation);
+				 removePoints();
+				 loadPoints(index+1);
+			 }
+			 $('#selector').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+				 $(".owl-carousel").trigger('to.owl.carousel', [clickedIndex, 300, true])
 
-			<!-- var dataTime = d3.range(0, 10).map(function(d) { -->
-				<!-- return new Date(1950 + d, 10, 3); -->
-			  <!-- }); -->
+			 });
 
-			  <!-- var sliderTime = d3 -->
-				<!-- .sliderBottom() -->
-				<!-- .min(d3.min(dataTime)) -->
-				<!-- .max(d3.max(dataTime)) -->
-				<!-- .step(1000 * 60 * 60 * 24 * 365 ) -->
-				<!-- .width(300) -->
-				<!-- .tickFormat(d3.timeFormat('%Y')) -->
-				<!-- .tickValues(dataTime) -->
-				<!-- .default(new Date(1950, 10, 3)) -->
-				<!-- .on('onchange', val => { -->
-				  <!-- d3.select('p#value-time').text(d3.timeFormat('%Y')(val)); -->
-				<!-- }); -->
+			 loadPoints(1);
 
-			  <!-- var gTime = d3 -->
-				<!-- .select('div#slider-time') -->
-				<!-- .append('svg') -->
-				<!-- .attr('width', 500) -->
-				<!-- .attr('height', 100) -->
-				<!-- .attr('style', ' padding-left: 70px') -->
-				<!-- .append('g') -->
-				<!-- .attr('transform', 'translate(30,30)'); -->
+			 <!-- var dataTime = d3.range(0, 10).map(function(d) { -->
+			 <!-- return new Date(1950 + d, 10, 3); -->
+			 <!-- }); -->
 
-			  <!-- gTime.call(sliderTime); -->
+			 <!-- var sliderTime = d3 -->
+			 <!-- .sliderBottom() -->
+			 <!-- .min(d3.min(dataTime)) -->
+			 <!-- .max(d3.max(dataTime)) -->
+			 <!-- .step(1000 * 60 * 60 * 24 * 365 ) -->
+			 <!-- .width(300) -->
+			 <!-- .tickFormat(d3.timeFormat('%Y')) -->
+			 <!-- .tickValues(dataTime) -->
+			 <!-- .default(new Date(1950, 10, 3)) -->
+			 <!-- .on('onchange', val => { -->
+			 <!-- d3.select('p#value-time').text(d3.timeFormat('%Y')(val)); -->
+			 <!-- }); -->
 
-			  <!-- d3.select('p#value-time').text(d3.timeFormat('%Y')(sliderTime.value())); -->
+			 <!-- var gTime = d3 -->
+			 <!-- .select('div#slider-time') -->
+			 <!-- .append('svg') -->
+			 <!-- .attr('width', 500) -->
+			 <!-- .attr('height', 100) -->
+			 <!-- .attr('style', ' padding-left: 70px') -->
+			 <!-- .append('g') -->
+			 <!-- .attr('transform', 'translate(30,30)'); -->
 
-			    // Range
-				var dataTime = d3.range(0, 60).map(function(d) {
-				return new Date(1950 + d, 10, 3);
-			  });
-				var minYear = d3.min(dataTime).getFullYear();
-				var maxYear = d3.max(dataTime).getFullYear();
-				var numYears = maxYear - minYear;
-			  var sliderRange = d3
-				.sliderBottom()
-				.min(d3.min(dataTime))
-				.max(d3.max(dataTime))
-				//.step(1000 * 60 * 60 * 24 * 365 * 5)
-				.width(300)
-				.ticks(numYears/5)
-				.tickFormat(d3.timeFormat('%Y'))
-				//.tickValues(dataTime)
-				.default([new Date(1970, 10, 3), new Date(1999, 10, 3)])
-				.fill('#2196f3')
-				.on('onchange', val => {
-				  d3.select('p#value-range').text(d3.timeFormat('%Y')(val));
-				});
+			 <!-- gTime.call(sliderTime); -->
 
-			  var gRange = d3
-				.select('div#slider-range')
-				.append('svg')
-				.attr('width', 500)
-				.attr('height', 100)
-				.attr('style', ' padding-left: 70px')
-				.append('g')
-				.attr('transform', 'translate(30,30)');
+			 <!-- d3.select('p#value-time').text(d3.timeFormat('%Y')(sliderTime.value())); -->
 
-			  gRange.call(sliderRange);
+			 // Range
+			 var dataTime = d3.range(0, 60).map(function(d) {
+				 return new Date(1950 + d, 10, 3);
+			 });
+			 var minYear = d3.min(dataTime).getFullYear();
+			 var maxYear = d3.max(dataTime).getFullYear();
+			 var numYears = maxYear - minYear;
+			 var sliderRange = d3
+					 .sliderBottom()
+					 .min(d3.min(dataTime))
+					 .max(d3.max(dataTime))
+					 //.step(1000 * 60 * 60 * 24 * 365 * 5)
+					 .width(300)
+					 .ticks(numYears/5)
+					 .tickFormat(d3.timeFormat('%Y'))
+					 //.tickValues(dataTime)
+					 .default([new Date(1970, 10, 3), new Date(1999, 10, 3)])
+					 .fill('#2196f3')
+					 .on('onchange', val => {
+						 d3.select('p#value-range').text(d3.timeFormat('%Y')(val));
+					 });
 
-			  d3.select('p#value-range').text(
-				sliderRange
-				  .value()
+			 var gRange = d3
+					 .select('div#slider-range')
+					 .append('svg')
+					 .attr('width', 500)
+					 .attr('height', 100)
+					 .attr('style', ' padding-left: 70px')
+					 .append('g')
+					 .attr('transform', 'translate(30,30)');
 
-			  );
+			 gRange.call(sliderRange);
 
+			 d3.select('p#value-range').text(
+					 sliderRange
+							 .value()
 
+			 );
 
-
+		 });
 
 </script>
 
@@ -258,5 +285,35 @@
     <script src="js/leaflet.spin.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjD5mSUeQs-WDATL5gpSJa2KZmuXDBQP4"
             async defer></script>
+<style type="text/css">
+	.owl-carousel .nav-btn{
+		height: 47px;
+		position: absolute;
+		width: 26px;
+		cursor: pointer;
+		top: 100px !important;
+	}
+
+	.owl-carousel .owl-prev.disabled,
+	.owl-carousel .owl-next.disabled{
+		pointer-events: none;
+		opacity: 0.2;
+	}
+
+	.owl-carousel .prev-slide{
+		background: url(img/nav-icon.png) no-repeat scroll 0 0;
+		left: -33px;
+	}
+	.owl-carousel .next-slide{
+		background: url(img/nav-icon.png) no-repeat scroll -24px 0px;
+		right: -8px;
+	}
+	.owl-carousel .prev-slide:hover{
+		background-position: 0px -53px;
+	}
+	.owl-carousel .next-slide:hover{
+		background-position: -24px -53px;
+	}
+</style>
 </body>
 </html>
